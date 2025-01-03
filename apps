@@ -1,0 +1,26 @@
+APP	FACETS	NTT PORTALS	PAYMENT PORTAL 	LEGACY PORTAL	CRM DYNAMICS	FAD		Customer 	Provider 	Enrollment	Member	Employer	Employee	Agent	CSR	Admin	Prospect
+Application Type	Windows	Web	Web	Web		Web											
+Data Flow																	
+UpStream Systems		Facet -> Data Warehouse -> NTT															
+DownStream Sys		1) Facet -> boomi -> facets (boomi will be replaced with Kong ) 2) NTT -> Zells															
+Login Details																	
+Test Data									"User ID -TestProvider200
+Password -Password_1"								
+USERS																	
+Testcase Location																	
+ADO																	
+Automated Tests																	
+Contacts																	
+Automation Repo Link 																	
+Current Repo will be replaced 																	
+changes to UI																	
+Web Services								Yes	Yes	Yes	Yes	Yes	Yes	Yes	Yes	Yes	
+URL									https://ops1-consumerism-wps.dxp.nttdataservices.com/en/Provider						https://ops1-consumerism-wps.dxp.nttdataservices.com/SSOGateway/HIPLogin/		
+Hosted By		Vendor hosted in cloud															
+INFO			credit card vendor , user enters info and handshake with cc vendor and handshake back with portal vendor and billing ID is displayed to end user. Billing details are sent over to WPS and entered in credit caard transaction table. Nighly job runs to update payment info					So those are users that have health insurance policies with us that they can log into a secure portal to access things like explanation of benefits, claims, deductible information, documents send secure messaging, et cetera.	Used by doc office, billing department, claim information, tools to unbundle and bundle claims.	Users can do quoting and actal entolment for plan that we have available right now. Soon individual plan will be hidden and medicare supplement plans wil be reduced to one state in WS. 		Employers who have policy for employees with WPS		similar to employers, if they sold group business, individual and family business. Individual and medicare supplement in short term. Enroll new customers in those plans, look at entire book of business across all the different products for a given month, Updated on weekly basis. Agency admin users and agency principal users and agency support users and 3 kinds of roles.	Internal wps employess, in call centers that are assisting portal users with any issues. They can search accounts, change pwd, reporting, approve pending itenms CSR admin, regular CSR, CSR vIP. VIP is those that are used to be inder the employee group 	config based, reporting based., similar to CSR.	During emrollment process insurance users have to create a prospect account, so they can relogin and continue application and pick up from where it was left off
+																	
+Need to create a group for autmation (agents, employees, providers etc…)																	
+Faucets - claims processing system, all systems integrate here																	
+SDS - vendor system, all claims are sent here to match provider to the right claim. They send 837 file from here																	
+																	
+																	
