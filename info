@@ -1,0 +1,94 @@
+Facet is claim processing system. It is used by many insurance companies. They receive claims from many providers in different forms.  
+
+Facet upgrade US comes from cognizant 
+
+When a person enrolls in Family Care, Family Care Partnership (Partnership), or PACE (Program of All-Inclusive Care for the Elderly), they become a member of a managed care organization (MCO). Members can choose the MCO they want to use. 
+
+MCOs help: 
+
+Manage the Family Care, Partnership, and PACE programs. 
+
+Provide or plan covered services. 
+
+Make sure services fit with what each member needs and prefers at any given time. 
+
+Maintain a full network of long-term care providers that members can use. 
+
+Keep up and improve the quality of care and services for members. 
+
+MCOs get funds each month for each member they serve. These funds help them find and schedule care that members need. 
+
+WPS is the TPA 
+
+TPA: Handles claim processing, billing, appeals, communication with employers, and exploring cost-saving strategies like group rating programs. 
+
+MCO: Oversees medical treatment decisions, provider network management, and coordinating return-to-work plans for injured employees. 
+
+The TPA acts as the employer's representative, advocating for cost-effective claim resolution, while the MCO manages the medical aspects of the claim 
+
+In Medicaid, the state government or the managed care organization (MCO) directly pays the TPA (Third Party Administrator) a fee for their services, which usually involves processing claims, managing beneficiary data, and handling administrative tasks related to Medicaid benefits; 
+
+Eligibility is the first step - check if subscriber is eligible 
+
+Claims are sent to SDS (3rd party vendor). This is used to match provider to the right address(They could have multiple locations and its priced different at each location) 
+
+837 comes in and SDS does some matching . Then it would come to facets and we run through claims process  and it goes all the way to workflow or XC, where it hangs if provider or member doesn't match. Then in the end it would produce 835s, remits, checks 
+
+Auth is by subscriber ID, it has provider tax ID for a procedure code 
+
+Z:\AppsDocs\HI Facets Scrum\Facets Upgrade Testing\Facets Upgrade 2024 - 6.10 R3 - facet tests 
+
+Claims will come in 2 types 
+
+Medical 
+
+Hospital 
+
+WPS makes payment directly to providers, no members 
+
+CLCL_CL_Sub_Type - Medical or Hospital 
+
+State of wisconsin provides FAMC to elderly. This is admistered through many MCOs (There are 5). 
+
+
+Family Care claims are received in various formats. 
+
+837 electronic claims. 
+
+CLTS CWA providers 
+
+FAMC MCO providers 
+
+837 Medicare crossover claims (FAMC MCO's only). 
+
+MCFC 
+
+Lakeland 
+
+Inclusa (WWC, CCCW) 
+
+837 OCR (Paper) claims. 
+
+CLTS CWA providers 
+
+FAMC MCO providers  
+
+SDS applies data scrubbing rules as defined by WPS Operations to all FAMC/CLTS claims that they received. 
+
+SDS will receive the MCO (FAMC) Medicare XOVER claims directly from CMS scrub and route each 837 transaction file to WPS. 
+
+SDS scans the FAMC/CLTS paper claims and formats to an 837 transaction file. 
+
+Excel claims are submitted to WPS directly. 
+
+CLTS CWA providers 
+
+FAMC MCO providers 
+
+All FAMC/CLTS claims are process through the Core Facets claim editing except for authorization and pricing. 
+
+FAMC/CLTS business rule engine (BRE) custom system is executed from Core Facets (CLMU extensions) to apply customized authorization and pricing rules defined for FAMC/CLTS claims. 
+
+NOTE - when they say groups they refer to MCOs 
+
+ 
